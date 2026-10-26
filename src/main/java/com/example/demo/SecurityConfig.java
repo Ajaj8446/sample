@@ -29,7 +29,7 @@ public class SecurityConfig {
                     permissions.policy("geolocation=(), camera=(), microphone=()"))
             )
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/").permitAll()
+                .requestMatchers("/", "/greet", "/greet/**").permitAll()
                 .anyRequest().authenticated()
             )
             .formLogin(form -> form.disable())
