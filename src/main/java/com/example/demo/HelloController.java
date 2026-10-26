@@ -30,5 +30,6 @@ public class HelloController {
             throw new IllegalArgumentException("ID must be a positive number");
         }
         return ResponseUtil.ok("Hello, user #" + id + "!");
+    }
 
 }
