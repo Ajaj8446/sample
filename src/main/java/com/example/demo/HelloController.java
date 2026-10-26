@@ -13,4 +13,10 @@ public class HelloController {
     public ResponseEntity<ApiResponse<String>> hello() {
         return ResponseUtil.ok("Hello from Spring Boot!");
     }
+
+    // add a new endpoint that returns a greeting message
+    @GetMapping("/greet")
+    public String greet() {
+        return "Greetings from Spring Boot!";
+    }
 }
